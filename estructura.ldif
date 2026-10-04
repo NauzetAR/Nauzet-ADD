@@ -1,3 +1,4 @@
+#Creación de OU
 dn: ou=Alumnado,dc=nauzet2026,dc=ldap
 objectClass: organizationalUnit
 ou: Alumnado
@@ -5,6 +6,8 @@ ou: Alumnado
 dn: ou=Profesorado,dc=nauzet2026,dc=ldap
 objectClass: organizationalUnit
 ou: Profesorado
+
+#Creación de grupos
 
 dn: cn=asir1,ou=Alumnado,dc=nauzet2026,dc=ldap
 objectClass: posixGroup
@@ -26,17 +29,19 @@ objectClass: posixGroup
 gidNumber: 2004
 cn: informatica2
 
+@Creación de usuarios
+
 dn: uid=Nauzetalu1,ou=Alumnado,dc=nauzet2026,dc=ldap
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-uid: nombrealu1
-cn: Oscar Perez
-sn: Perez
-givenName: Oscar
+uid: Nauzetalu1
+cn: Nauzetalu1
+sn: Aleman
+givenName: Nauzetalu1
 uidNumber: 1001
 gidNumber: 2001
-homeDirectory: /home/Oscar
+homeDirectory: /home/Nauzetalu1
 loginShell: /bin/bash
 userPassword: {SSHA}1234
 mail: Nauzetalu1@nauzet2026.ldap
@@ -46,12 +51,12 @@ objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
 uid: Nauzetalu2
-cn: Marcos Perez
-sn: Perez
-givenName: Marcos
+cn: Nauzetalu2
+sn: Aleman
+givenName: Nauzetalu2
 uidNumber: 1002
 gidNumber: 2002
-homeDirectory: /home/Marcos
+homeDirectory: /home/Nauzetalu2
 loginShell: /bin/bash
 userPassword: {SSHA}1234
 mail: Nauzetalu2@nauzet2026.ldap
@@ -60,13 +65,13 @@ dn: uid=Nauzetpro1,ou=Profesorado,dc=nauzet2026,dc=ldap
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-uid: nombrepro1
-cn: Carlos Perez
-sn: Perez
-givenName: Carlos
+uid: Nauzetpro1
+cn: Nauzetpro1
+sn: Aleman
+givenName: Nauzetpro1
 uidNumber: 1003
 gidNumber: 2003
-homeDirectory: /home/Carlos
+homeDirectory: /home/Nauzetpro1
 loginShell: /bin/bash
 userPassword: {SSHA}1234
 mail: Nauzetpro1@nauzet2026.ldap
@@ -75,13 +80,13 @@ dn: uid=Nauzetpro2,ou=Profesorado,dc=nauzet2026,dc=ldap
 objectClass: inetOrgPerson
 objectClass: posixAccount
 objectClass: shadowAccount
-uid: nombrepro2
-cn: Alvaro Perez
-sn: Perez
-givenName: Alvaro
+uid: Nauzetpro2
+cn: Nauzetpro2
+sn: Aleman
+givenName: Nauzetpro2
 uidNumber: 1004
 gidNumber: 2004
-homeDirectory: /home/Alvaro
+homeDirectory: /home/Nauzetpro2
 loginShell: /bin/bash
 userPassword: {SSHA}1234
 mail: Nauzetpro2@nauzet2026.ldap
