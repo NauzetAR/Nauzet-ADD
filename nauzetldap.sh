@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Variable de dominio
 dominio="dc=nauzet2026,dc=ldap"
 op=3
@@ -46,6 +48,7 @@ while [ "$op" -ne 4 ]; do
             ldapmodify -x -D "cn=admin,$dominio" -W -f temp_cambio.ldif
             rm -f temp_cambio.ldif
             ;;
+
 #Mostrar usuarios
         3)
             echo "1. Ver un usuario"
@@ -55,8 +58,10 @@ while [ "$op" -ne 4 ]; do
             if [ "$sub" == "1" ]; then
                 read -p "Introduce el UID: " uid_3
                 ldapsearch -x -b "$dominio" "(uid=$uid_3)" cn mail
-            else
+            elif [ "$sub" == "2" ]; then
                 ldapsearch -x -b "$dominio" "(objectClass=inetOrgPerson)" cn mail
+            else
+                echo "Opción no válida."
             fi
             ;;
 
